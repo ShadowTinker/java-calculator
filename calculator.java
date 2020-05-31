@@ -65,6 +65,8 @@ class MainFrame extends JFrame {
   String resultShow = "";
   String pendingShow = "";
   boolean isInitialized = false; // this is used to judge whether the first input is initialized
+  boolean hasDot = false; // this is used to judge the presence of dot
+  int dotIndex = 0; // this is used to decide how much steps the dot should move
   Double first = null; // this is the left operand of the equation
   Double second = null; // this is the right operand of the equation
   char lastOperator = '0';
@@ -130,14 +132,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 1.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 1;
+        } else {
+          dotIndex++;
+          first = first + 1 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 1.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 1;
+        } else {
+          dotIndex++;
+          second = second + 1 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("1");
@@ -148,14 +156,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 2.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 2;
+        } else {
+          dotIndex++;
+          first = first + 2 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 2.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 2;
+        } else {
+          dotIndex++;
+          second = second + 2 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("2");
@@ -166,14 +180,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 3.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 3;
+        } else {
+          dotIndex++;
+          first = first + 3 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 3.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 3;
+        } else {
+          dotIndex++;
+          second = second + 3 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("3");
@@ -184,14 +204,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 4.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 4;
+        } else {
+          dotIndex++;
+          first = first + 4 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 4.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 4;
+        } else {
+          dotIndex++;
+          second = second + 4 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("4");
@@ -202,14 +228,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 5.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 5;
+        } else {
+          dotIndex++;
+          first = first + 5 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 5.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 5;
+        } else {
+          dotIndex++;
+          second = second + 5 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("5");
@@ -220,14 +252,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 6.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 6;
+        } else {
+          dotIndex++;
+          first = first + 6 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 6.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 6;
+        } else {
+          dotIndex++;
+          second = second + 6 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("6");
@@ -238,14 +276,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 7.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 7;
+        } else {
+          dotIndex++;
+          first = first + 7 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 7.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 7;
+        } else {
+          dotIndex++;
+          second = second + 7 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("7");
@@ -256,14 +300,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 8.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 8;
+        } else {
+          dotIndex++;
+          first = first + 8 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 8.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 8;
+        } else {
+          dotIndex++;
+          second = second + 8 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("8");
@@ -274,14 +324,20 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 9.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10 + 9;
+        } else {
+          dotIndex++;
+          first = first + 9 * Math.pow(0.1, dotIndex);
         }
       } else {
         if (second == null) {
           second = 9.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10 + 9;
+        } else {
+          dotIndex++;
+          second = second + 9 * Math.pow(0.1, dotIndex);
         }
       }
       contanenatePending("9");
@@ -292,14 +348,18 @@ class MainFrame extends JFrame {
       if (!isInitialized) {
         if (first == null) {
           first = 0.0;
-        } else {
+        } else if (!hasDot) {
           first = first * 10;
+        } else {
+          dotIndex++;
         }
       } else {
         if (second == null) {
           second = 0.0;
-        } else {
+        } else if (!hasDot) {
           second = second * 10;
+        } else {
+          dotIndex++;
         }
       }
       contanenatePending("0");
@@ -353,6 +413,8 @@ class MainFrame extends JFrame {
         second = null;
         setResult(Double.toString(first));
       }
+      hasDot = false;
+      dotIndex = 0;
       lastOperator = '+';
       contanenatePending("+");
     }
@@ -406,6 +468,8 @@ class MainFrame extends JFrame {
         setResult(Double.toString(first));
       }
       lastOperator = '-';
+      hasDot = false;
+      dotIndex = 0;
       contanenatePending("-");
     }
   }
@@ -459,6 +523,8 @@ class MainFrame extends JFrame {
         setResult(Double.toString(first));
       }
       lastOperator = '*';
+      hasDot = false;
+      dotIndex = 0;
       contanenatePending("*");
     }
   }
@@ -512,6 +578,8 @@ class MainFrame extends JFrame {
         setResult(Double.toString(first));
       }
       lastOperator = '/';
+      hasDot = false;
+      dotIndex = 0;
       contanenatePending("/");
     }
   }
@@ -563,8 +631,9 @@ class MainFrame extends JFrame {
         second = null;
         setResult(Double.toString(first));
       }
-      pending.setText("");
       second = null;
+      hasDot = false;
+      dotIndex = 0;
       isInitialized = false;
       lastOperator = '=';
     }
@@ -578,9 +647,13 @@ class MainFrame extends JFrame {
         first = null;
         second = null;
         isInitialized = false;
+        hasDot = false;
+        dotIndex = 0;
         lastOperator = '0';
       } else {
         for (int j = current.length() - 1; j >= 0; j--) {
+          hasDot = false;
+          dotIndex = 0;
           if (current.charAt(j) == '+') {
             pending.setText(current.substring(0, j + 1));
             second = null;
@@ -610,6 +683,88 @@ class MainFrame extends JFrame {
       second = null;
       isInitialized = false;
       lastOperator = '0';
+      hasDot = false;
+      dotIndex = 0;
+    }
+  }
+  class buttonBackspace implements ActionListener {
+    public void actionPerformed (ActionEvent e) {
+      String current = pending.getText();
+      if (!isInitialized) {
+        if (lastOperator == '=') {
+          dotIndex = 0;
+          hasDot = false;
+          return;
+        } else if (current.length() > 1) {
+          if (current.charAt(current.length() - 1) == '.') {
+            hasDot = false;
+            dotIndex = 0;
+          }
+          pending.setText(current.substring(0, current.length() - 1));
+          first = Double.parseDouble(pending.getText());
+        } else if (current.length() == 1) {
+          pending.setText("");
+          result.setText("");
+          first = null;
+          second = null;
+          isInitialized = false;
+          lastOperator = '0';
+          hasDot = false;
+          dotIndex = 0;
+        }
+      } else {
+        char last = current.charAt(current.length() - 1);
+        if (last == '.') {
+          pending.setText(current.substring(0, current.length() - 1));
+          hasDot = false;
+          dotIndex = 0;
+        } else if (last == '+' || last == '-' || last == '*' || last == '/' || lastOperator == '=') {
+          hasDot = false;
+          dotIndex = 0;
+          return;
+        } else {
+          if (second == null) {
+            return;
+          } else {
+            for (int j = current.length() - 1; j >= 0; j--) {
+              if (current.charAt(j) == '+' || current.charAt(j) == '-' || current.charAt(j) == '*' || current.charAt(j) == '/') {
+                if (last == '.') {
+                  hasDot = false;
+                  dotIndex = 0;
+                } else if (hasDot) {
+                  dotIndex -= 1;
+                }
+                second = Double.parseDouble(pending.getText().substring(j + 1, current.length() - 1));
+                pending.setText(current.substring(0, current.length() - 1));
+                break;
+              } 
+            }
+          }
+        }
+      }
+    }
+  }
+  class buttonDot implements ActionListener {
+    public void actionPerformed (ActionEvent e) {
+      if (!isInitialized) {
+        if (first == null) {
+          first = 0.0;
+          hasDot = true;
+          contanenatePending("0.");
+        } else if (!hasDot) {
+          hasDot = true;
+          contanenatePending(".");
+        }
+      } else {
+        if (second == null) {
+          second = 0.0;
+          hasDot = true;
+          contanenatePending("0.");
+        } else if (!hasDot) {
+          hasDot = true;
+          contanenatePending(".");
+        }
+      }
     }
   }
   public void setError (String content) {
@@ -641,6 +796,8 @@ class MainFrame extends JFrame {
     equal.addActionListener(new buttonEqual());
     clear.addActionListener(new buttonClear());
     clearAll.addActionListener(new buttonClearAll());
+    backspace.addActionListener(new buttonBackspace());
+    dot.addActionListener(new buttonDot());
   } 
   public MainFrame (String title) {
     super(title);
